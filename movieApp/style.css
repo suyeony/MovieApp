@@ -1,0 +1,74 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+ background-color: #141414;
+ margin: 0px;
+}
+
+nav {
+    border-bottom: 3px solid black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #141414;
+    opacity: 0.9;
+}
+        
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+
+}
+
+nav a {
+    text-align: center;
+    color: #E6E6E6;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    padding: 14px 16px;
+    margin-left: 10px;
+    border-bottom: 4px solid transparent;
+
+}
+
+nav a.active {
+    border-bottom: 4px solid red;
+}
+
+main {
+    padding: 16px;
+    margin-top: 30px;
+}
+
+h5 {
+    color: white;
+    margin-left: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.movie_list-card {
+    margin-left: 7px;
+    width: 250px;
+    
+}
+
+
+.movie_list-title {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    margin: 0px;
+}
+
+.movie_list-year {
+    color: #8A8A86;
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
