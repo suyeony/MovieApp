@@ -11,44 +11,33 @@
       <header>
         <nav>
           <ul>
-            <li><a class="active" href="aboutme.html">Movies</a></li>
-            <li><a href="portfolio.html">TV</a></li>
-            <li><a href="site-plan.html">Search</a></li>
+            <li><a id="category--movie" class="active" href="index.html">Movies</a></li>
+            <li><a href="tv.html">TV</a></li>
+            <li><a href="search.html">Search</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <div class="category-first">
-          <h5 class="category-name">Now playing</h5>
-          <div class="movie_list">
-            <div class="movie_list-card">
-              <img class="movie_list-image" src="Sonic_the_Hedgehog_poster.jpg" alt="movie image">
-              <p class="movie_list-title">Sonic the Hedgehog</p>
-              <p class="movie_list-year">2020</p>
-            </div>
+        <div class="category-first" id="category_first">
+          <h5 id="now_playing_button" class="category-name">Now playing</h5>
+          <div class="movie_list" id="now_playing">
           </div>
         </div>
         <div class="category-second">
           <h5 class="category-name">Upcoming Movies</h5>
-          <div class="movie_list">
-            <div class="movie_list-card">
-              <img class="movie_list-image" src="Sonic_the_Hedgehog_poster.jpg" alt="movie image">
-              <p class="movie_list-title">Sonic the Hedgehog</p>
-              <p class="movie_list-year">2020</p>
-            </div>
+          <div class="movie_list" id="upcoming">
           </div>
         </div>
         <div class="category-third">
           <h5 class="category-name">Popular Movies</h5>
-          <div class="movie_list">
+          <div class="movie_list" id="popular">
             <div class="movie_list-card">
-              <img class="movie_list-image" src="Sonic_the_Hedgehog_poster.jpg" alt="movie image">
-              <p class="movie_list-title">Sonic the Hedgehog</p>
-              <p class="movie_list-year">2020</p>
             </div>
           </div>
         </div>
       </main>
     </div>
+    <script src="index.js">
+    </script>
   </body>
 </html>
