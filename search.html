@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Movie</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <nav>
+          <ul>
+            <li><a id="category--movie" href="index.html">Movies</a></li>
+            <li><a href="tv.html">TV</a></li>
+            <li><a href="search.html" class="active">Search</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div class="search">
+            <input class="search_box" type="text" id="myinput" placeholder=" Search Movies or TV Shows...">
+        </div>
+        <div class="category-first" id="category_first">
+          <h5 id="now_playing_button" class="category-name">Movie Results</h5>
+          <div class="movie_list" id="Movie_Results">
+          </div>
+        </div>
+        <div class="category-second">
+          <h5 class="category-name">TV Show Results</h5>
+          <div class="movie_list" id="TV_Show_Results">
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="index.js">
+    </script>
+  </body>
+</html>
