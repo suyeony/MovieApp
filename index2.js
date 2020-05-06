@@ -27,7 +27,6 @@ const displayMovies = (data, type) => {
       }
   
       card.appendChild(p3);
-  
       list.appendChild(card);
     }
   };
@@ -37,36 +36,26 @@ const displayMovies = (data, type) => {
       "https://api.themoviedb.org/3/movie/now_playing?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1",
       "https://api.themoviedb.org/3/movie/upcoming?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1",
       "https://api.themoviedb.org/3/movie/popular?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1",
-    ];
-  
-    const responses = await Promise.all(urls.map((url) => fetch(url)));
-    const [now_playing, upcoming, popular] = await Promise.all(
-      responses.map((response) => response.json())
-    );
-    console.log(now_playing);
-    console.log(upcoming);
-    console.log(popular);
-    displayMovies(now_playing, "now_playing");
-    displayMovies(upcoming, "upcoming");
-    displayMovies(popular, "popular");
-  };
-
-  const getDataFromApi_2 = async () => {
-    let urls = [
       "https://api.themoviedb.org/3/tv/top_rated?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1",
       "https://api.themoviedb.org/3/tv/popular?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1",
       "https://api.themoviedb.org/3/tv/airing_today?api_key=86e1929147898523c764072b1412eed4&language=en-US&page=1"
     ];
   
     const responses = await Promise.all(urls.map((url) => fetch(url)));
-    const [top_rated, popular, airing_today] = await Promise.all(
+    const [now_playing, upcoming, popular, top_rated, popular_tv, airing_today] = await Promise.all(
       responses.map((response) => response.json())
     );
-    console.log(top_rated);
+    console.log(now_playing);
+    console.log(upcoming);
     console.log(popular);
+    console.log(top_rated);
+    console.log(popular_tv);
     console.log(airing_today);
+    displayMovies(now_playing, "now_playing");
+    displayMovies(upcoming, "upcoming");
+    displayMovies(popular, "popular");
     displayMovies(top_rated, "Top_Rated_Shows");
-    displayMovies(popular, "Popular_Shows");
+    displayMovies(popular_tv, "Popular_Shows");
     displayMovies(airing_today, "Airing_Today");
   };
 
@@ -136,5 +125,4 @@ const displayMovies = (data, type) => {
   
   window.onload = function () {
     getDataFromApi();
-    getDataFromApi_2();
   };
