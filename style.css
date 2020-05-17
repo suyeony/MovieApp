@@ -45,10 +45,14 @@ main {
     margin-top: 30px;
 }
 
-h5 {
+.category-name {
     color: white;
     margin-left: 7px;
     font-family: 'Roboto', sans-serif;
+}
+
+#movie_result_title #tvshow_result_title {
+    visibility: hidden;
 }
 
 .movie_list {
