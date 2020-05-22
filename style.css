@@ -70,9 +70,31 @@ main {
     height: 195px;
 }
 
+.movie-vote-container {
+    position: relative;
+}
+
 .movie_list-image {
     width: 100%;
     border-radius: 3px;
+}
+
+.movie_list-vote {
+    font-size: 0.8em;
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+
+}
+
+.movie-vote-container:hover .movie_list-vote {
+    display: block;
+}
+
+.movie-vote-container:hover .movie_list-image {
+    opacity: 0.3;
 }
 
 

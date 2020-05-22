@@ -6,18 +6,46 @@ const displayMovies = (data, type) => {
   
       var card = document.createElement("div");
       card.className = "movie_list-card";
+
+      var vote_container = document.createElement("div");
+      vote_container.className = "movie-vote-container";
   
       var p1 = document.createElement("img");
       p1.className = "movie_list-image";
-      p1.setAttribute(
-        "src",
-        "https://image.tmdb.org/t/p/w500/" + data.results[i].poster_path
-      );
-      card.appendChild(p1);
+      if (data.results[i].poster_path == null) {
+        p1.setAttribute(
+          "src",
+          "not-found-image.jpg"
+        );
+      }
+      else {
+        p1.setAttribute(
+          "src",
+          "https://image.tmdb.org/t/p/w500/" + data.results[i].poster_path
+        );
+      }
+      vote_container.appendChild(p1);
+
+      var vote = document.createElement("div");
+      vote.className = "movie_list-vote";
+
+      vote.innerHTML = "<span>&#11088;</span> " + data.results[i].vote_average + "/10";
+      vote_container.appendChild(vote);
+      
+      card.appendChild(vote_container);
   
       var p2 = document.createElement("p");
       p2.className = "movie_list-title";
-      p2.innerHTML = data.results[i].title;
+      if (data.results[i].original_title.length > 20) {
+        for (var a = 0; a < 20; a++) {
+          p2.innerHTML += data.results[i].original_title[a];
+        }
+        p2.innerHTML += '...';
+      }
+  
+      else {
+        p2.innerHTML = data.results[i].original_title;
+      }
       card.appendChild(p2);
   
       var p3 = document.createElement("p");
